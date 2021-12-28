@@ -2,14 +2,6 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:http/retry.dart';
 
-void main() async {
-  Estra a = new Estra();
-  a.typeCat = "anigames";
-  a.endPoint = "husbando";
-  var OutPut = await a.outputJSON();
-  print(OutPut);
-}
-
 class Estra {
   var typeCat;
   var endPoint;

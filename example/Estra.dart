@@ -1,4 +1,6 @@
-import "package:estra/estra.dart" as Estra;
+library Estra;
+
+import "package:estradart/estra.dart";
 
 void main() async {
   Estra a = new Estra();
