@@ -3,6 +3,7 @@ version: "0.1.1"
 documentation: "https://stawa.gitbook.io/estraapi-documentation/"
 homepage: "https://github.com/StawaDev/EstraDart"
 publish_to: "https://pub.dev"
+description: "A Basic Wrapper Anime Image API Created By Stawa Version Dart/Flutter"
 environment:
   sdk: '>=2.10.0 <3.0.0'
 dependencies: 
