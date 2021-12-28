@@ -1,0 +1,10 @@
+name: "EstraDart"
+version: "0.1.1"
+documentation: "https://stawa.gitbook.io/estraapi-documentation/"
+homepage: ""
+publish_to: "https://pub.dev"
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+dependencies: 
+  async: ^2.8.2
+  http: ^0.13.4
