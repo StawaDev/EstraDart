@@ -12,6 +12,7 @@ or you can use flutter
 flutter pub add estradart
 ```
 
+Now you can import the EstraDart by typing,
 ```dart
 import 'package:estra/estra.dart';
 ```
