@@ -11,7 +11,7 @@
 
 ## Examples
 
-```
+```dart
 library Estra;
 
 import 'package:estradart/estradart.dart';
