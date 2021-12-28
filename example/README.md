@@ -14,13 +14,13 @@ flutter pub add estradart
 
 Now you can import the EstraDart by typing,
 ```dart
-import 'package:estra/estra.dart';
+import "package:estra/estra.dart" as Estra;
 ```
 
 ## Simple Examples
 
 ```dart
-import 'package:estra/estra.dart' as Estra;
+import "package:estra/estra.dart" as Estra;
 
 void main() async {
   Estra a = new Estra();
