@@ -5,9 +5,12 @@ Before you can import the EstraDart, you must install the following packages,
 ```dart
 dart pub add estradart
 ```
+
 or you can use flutter
+
 ```dart
 flutter pub add estradart
+```
 
 ```dart
 import 'package:estra/estra.dart';
