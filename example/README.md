@@ -25,8 +25,22 @@ import 'package:estradart/estradart.dart';
 void main() async {
   Estra a = new Estra();
   a.typeCat = "anigames";
-  a.endPoint = "husbando";
-  var OutPut = await a.outputJSON();
-  print(OutPut);
+  a.endPoint = "waifu";
+  print(await a.outputJSON());
+}
+```
+
+## Confused?
+Don't worry! If you confused with our endpoint, you can use our Help function or you can search it on our documentation!
+```dart
+import 'package:estradart/estrahelp.dart';
+
+// Available endpoints "All, Sfw, Nsfw, AniGames, Nsfw"
+void main() async {
+  var Helper = new Help();
+  print(Helper.Sfw());
+  print(Helper.Nsfw());
+  print(Helper.AniGames());
+  print(Helper.All());
 }
 ```
