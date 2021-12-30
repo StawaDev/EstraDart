@@ -2,22 +2,16 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:http/retry.dart';
 
-/**
- * Variable HttpManager Have A Function That Return Output
- */
+/// Variable HttpManager Have A Function That Return Output
 var HttpManager = new HttpManagers();
 
-/**
- * Class HttpManagers Have A Job That Will Return Output
- */
+/// Class HttpManagers Have A Job That Will Return Output
 class HttpManagers {
   var BASE_URL = "http://estra-api.herokuapp.com/api";
   var Category;
   var EndPoint;
 
-  /**
-   * Return Link From JSON Request
-   */
+  /// Return Link From JSON Request
   TypeLink() async {
     final base = RetryClient(http.Client());
     try {
@@ -29,9 +23,7 @@ class HttpManagers {
     }
   }
 
-  /**
-   * Return Text From JSON Request
-   */
+  /// Return Text From JSON Request
   TypeText() async {
     final base = RetryClient(http.Client());
     try {
