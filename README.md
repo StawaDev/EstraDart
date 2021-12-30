@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-    A Basic Wrapper Anime Image API Created By Stawa Version Dart/Flutter
+    A Basic Wrapper Anime Image API Using EstraAPI with Dart/Flutter Language
 </h2>
 <p align="center">
 <a href="https://stawa.gitbook.io/estraapi-documentation/"><img src ="https://img.shields.io/badge/Estra--API-Documentation-brightgreen?style=for-the-badge"></a>
@@ -15,6 +15,7 @@
 - Truth or Dare
 - Anime GIFs
 - Anime Waifu/Husbando Picture
+- User Friendly Code
 
 ## Simple Examples
 
