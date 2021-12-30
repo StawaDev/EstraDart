@@ -15,6 +15,12 @@ var NSFW = ["yaoi", "yuri", "kill"];
 var AniGamesList = ["truth", "dare", "waifu", "husbando"];
 var AniGames_Type_Link = ["waifu", "husbando"];
 var GamesList = ["truth", "dare"];
+var AllType = [
+  "sfw",
+  "nsfw",
+  "anigames",
+  "games",
+];
 
 var AllList = {
   "Sfw": "${SFW.join(", ")}",
@@ -25,15 +31,19 @@ var AllList = {
 
 class Help {
   Sfw() {
-    return "Sfw List Endpoints: $SFW";
+    return "Sfw List Endpoints: ${SFW.join(", ")}";
   }
 
   Nsfw() {
-    return "Nsfw List Endpoints: $NSFW";
+    return "Nsfw List Endpoints: ${NSFW.join(", ")}";
   }
 
   AniGames() {
-    return "AniGames List Endpoints: $AniGamesList";
+    return "AniGames List Endpoints: ${AniGamesList.join(", ")}";
+  }
+
+  Games() {
+    return "Games List Endpoints: ${GamesList.join(", ")}";
   }
 
   All() {
