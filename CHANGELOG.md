@@ -1,3 +1,9 @@
+## v0.1.4
+- Replacing Current Helper Function with EstraHelp Function
+- Fixed NSFW Function
+- Added Description Every Class and Function
+- Added Errors Handler for Http Request
+
 ## v0.1.3
 - Code Cleaning
 - New Features
