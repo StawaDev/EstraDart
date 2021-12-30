@@ -23,10 +23,9 @@ import 'package:estradart/estradart.dart';
 import 'package:estradart/estradart.dart';
 
 void main() async {
-  Estra a = new Estra();
-  a.typeCat = "anigames";
-  a.endPoint = "waifu";
-  print(await a.outputJSON());
+  print(await EstraSFW.slap());
+  print(await EstraNSFW.kill());
+  // More Examples On Specific Category Files
 }
 ```
 
@@ -41,6 +40,8 @@ void main() async {
   print(Helper.Sfw());
   print(Helper.Nsfw());
   print(Helper.AniGames());
+  print(Helper.Games());
   print(Helper.All());
 }
+
 ```

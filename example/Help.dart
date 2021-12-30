@@ -6,5 +6,6 @@ void main() async {
   print(Helper.Sfw());
   print(Helper.Nsfw());
   print(Helper.AniGames());
+  print(Helper.Games());
   print(Helper.All());
 }
