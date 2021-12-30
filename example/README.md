@@ -34,7 +34,7 @@ Don't worry! If you confused with our endpoint, you can use our Help function or
 ```dart
 import 'package:estradart/estrahelp.dart';
 
-// Available endpoints "All, Sfw, Nsfw, AniGames, Nsfw"
+// Available endpoints "All, Sfw, Nsfw, AniGames, Games"
 void main() async {
   var Helper = new Help();
   print(Helper.Sfw());
