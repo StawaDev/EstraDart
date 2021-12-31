@@ -3,6 +3,7 @@ import 'src/nsfw.dart';
 import 'src/anigames.dart';
 import 'src/games.dart';
 import 'src/estrahelp.dart';
+import 'src/countdata.dart';
 
 /// ### SFW Class
 /// AniGames Class Have Their Own Endpoint Functions, Once You Put The Correct Endpoint, It Will Return Normally,
@@ -72,3 +73,18 @@ var EstraGames = new TypeGames();
 /// }
 /// ```
 var EstraHelp = new Help();
+
+/// ### Help Class
+/// Help Class Have Their Own Functions, Every Function Return a Variable List with Valids Endpoints. In case you puts the wrong endpoints function, you will get an errors message.
+/// ### Example
+/// ```dart
+/// library Estra;
+/// import 'package:estradart/estradart.dart';
+/// void main() {
+///   print("Total Image of Sfw Poke : ${await EstraData.totalSfw("poke")}");
+///   print(
+///     "Total Text of Truth Challenge : ${await EstraData.totalGames("truth")}");
+/// }
+/// ```
+
+var EstraData = new Data();
