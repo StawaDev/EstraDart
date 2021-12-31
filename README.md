@@ -36,4 +36,4 @@ void main() async {
 ## Links
 - [Documentation](https://stawa.gitbook.io/estraapi-documentation)
 - [Homepage](https://github.com/StawaDev/EstraDart)
-- [Application Programming Interface](http://estra-api.herokuapp.com)
+- [Application Programming Interface](https://estra-api.herokuapp.com)
