@@ -28,7 +28,7 @@ class HttpManagers {
     final base = RetryClient(http.Client());
     try {
       String DataText =
-          await base.read(Uri.parse("$BASE_URL/{$Category}/{$EndPoint}"));
+          await base.read(Uri.parse("$BASE_URL/$Category/$EndPoint"));
       return jsonDecode(DataText)["text"];
     } finally {
       base.close();
