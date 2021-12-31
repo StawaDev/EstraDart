@@ -62,4 +62,26 @@ class TypeAniGames {
       return e;
     }
   }
+
+  Future husbando_name() async {
+    try {
+      var GetName = InputLink.replaceAll(
+          "https://estra-source.herokuapp.com/assets/images/Husbando/", "");
+      if (GetName.contains(".jpeg")) {
+        var RemoveType = GetName.replaceAll(".jpeg", "");
+        var HusbandoName = RemoveType.replaceAll("-", " ");
+        return HusbandoName;
+      } else if (GetName.contains(".png")) {
+        var RemoveType = GetName.replaceAll(".png", "");
+        var HusbandoName = RemoveType.replaceAll("-", " ");
+        return HusbandoName;
+      } else if (GetName.contains(".jpg")) {
+        var RemoveType = GetName.replaceAll(".jpg", "");
+        var HusbandoName = RemoveType.replaceAll("-", " ");
+        return HusbandoName;
+      }
+    } catch (e) {
+      return e;
+    }
+  }
 }
