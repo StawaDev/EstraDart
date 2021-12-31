@@ -2,7 +2,8 @@
 - Replacing Current Helper Function with EstraHelp Function
 - Fixed NSFW Function
 - Added Description Every Class and Function
-- Added Errors Handler for Http Request
+- Added New Features Function EstraAniGames
+- Updated Examples
 
 ## v0.1.3
 - Code Cleaning
