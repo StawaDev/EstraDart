@@ -1,3 +1,8 @@
+## v0.1.5
+- Added EstraData Class
+- Added New A Function with Counting Data Features From API
+- Updated Examples
+
 ## v0.1.4
 - Replacing Current Helper Function with EstraHelp Function
 - Fixed NSFW Function
