@@ -14,6 +14,7 @@ import 'package:estradart/http.dart';
 ///```
 class TypeAniGames {
   var Category = HttpManager.Category = "anigames";
+  var InputLink;
 
   /// Return Truth as Text
   truth() async {
@@ -39,5 +40,28 @@ class TypeAniGames {
   husbando() async {
     HttpManager.EndPoint = "husbando";
     return await HttpManager.TypeLink();
+  }
+
+  /// Return Waifu Characters Name as Text
+  Future waifu_name() async {
+    try {
+      var GetName = InputLink.replaceAll(
+          "https://estra-source.herokuapp.com/assets/images/Waifu/", "");
+      if (GetName.contains(".jpeg")) {
+        var RemoveType = GetName.replaceAll(".jpeg", "");
+        var WaifuName = RemoveType.replaceAll("-", " ");
+        return WaifuName;
+      } else if (GetName.contains(".png")) {
+        var RemoveType = GetName.replaceAll(".png", "");
+        var WaifuName = RemoveType.replaceAll("-", " ");
+        return WaifuName;
+      } else if (GetName.contains(".jpg")) {
+        var RemoveType = GetName.replaceAll(".jpg", "");
+        var WaifuName = RemoveType.replaceAll("-", " ");
+        return WaifuName;
+      }
+    } catch (e) {
+      return e;
+    }
   }
 }
