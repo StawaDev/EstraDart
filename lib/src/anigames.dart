@@ -22,9 +22,7 @@ class TypeAniGames {
     return await HttpManager.TypeText();
   }
 
-  /**
-   * Return Dare as Text
-   */
+  /// Return Dare as Text
   dare() async {
     HttpManager.EndPoint = "dare";
     return await HttpManager.TypeText();
