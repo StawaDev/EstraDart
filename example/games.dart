@@ -7,7 +7,7 @@ void main() async {
 }
 
 void firstExample() async {
-  print(await EstraGames.truth());
-  print(await EstraGames.dare());
+  print("Truth Challenge: ${await EstraGames.truth()}");
+  print("Dare Challenge: ${await EstraGames.dare()}");
   // More EndPoint Use EstraHelp Function!
 }
