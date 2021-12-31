@@ -19,4 +19,5 @@ void secondExample() async {
   var GetWaifu = EstraAniGames.InputLink = await EstraAniGames.waifu();
   print("Waifu Picture: $GetWaifu");
   print("Waifu Name: ${await EstraAniGames.waifu_name()}");
+  // Just an reminder, you can't use two waifu_name function in once or it will return the same name!
 }
