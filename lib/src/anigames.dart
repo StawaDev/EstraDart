@@ -63,6 +63,7 @@ class TypeAniGames {
     }
   }
 
+  /// Return Husbando Characters Name as Text
   Future husbando_name() async {
     try {
       var GetName = InputLink.replaceAll(
