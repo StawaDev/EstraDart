@@ -3,7 +3,7 @@ import 'src/nsfw.dart';
 import 'src/anigames.dart';
 import 'src/games.dart';
 import 'src/estrahelp.dart';
-import 'src/countdata.dart';
+import 'src/data.dart';
 
 /// ### SFW Class
 /// AniGames Class Have Their Own Endpoint Functions, Once You Put The Correct Endpoint, It Will Return Normally,
