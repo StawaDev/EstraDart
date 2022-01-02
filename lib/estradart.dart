@@ -4,6 +4,7 @@ import 'src/anigames.dart';
 import 'src/games.dart';
 import 'src/estrahelp.dart';
 import 'src/data.dart';
+import 'src/reminder.dart';
 
 /// ### SFW Class
 /// AniGames Class Have Their Own Endpoint Functions, Once You Put The Correct Endpoint, It Will Return Normally,
@@ -74,8 +75,8 @@ var EstraGames = new TypeGames();
 /// ```
 var EstraHelp = new Help();
 
-/// ### Help Class
-/// Help Class Have Their Own Functions, Every Function Return a Variable List with Valids Endpoints. In case you puts the wrong endpoints function, you will get an errors message.
+/// ### Data Class
+/// Data Class Hvae a Simple Function that Will Return How Much Image or Text with Specific Endpoints Does Have
 /// ### Example
 /// ```dart
 /// library Estra;
@@ -88,3 +89,18 @@ var EstraHelp = new Help();
 /// ```
 
 var EstraData = new Data();
+
+/// ### Reminder Class
+/// Reminder Class is A Simple Reminder That Will *Print* When EstraDart Have an New Versions
+/// ### Examples
+/// ```
+/// library Estra;
+/// import 'package:estradart/estradart.dart';
+///
+/// void main() {
+///   EstraReminder.UpdateReminder();
+/// }
+///```
+/// ### Important Note
+/// As always, do NOT use this class function with print method, because it will return null as well.
+var EstraReminder = new EstraReminderBase();
