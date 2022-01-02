@@ -51,4 +51,15 @@ class HttpManagers {
       base.close();
     }
   }
+
+  /// Return Up to Date Version of EstraDart From JSON Request
+  Version() async {
+    final base = RetryClient(http.Client());
+    try {
+      return jsonDecode(
+          await base.read(Uri.parse("$BASE_URL/version")))["EstraDart Version"];
+    } finally {
+      base.close();
+    }
+  }
 }
