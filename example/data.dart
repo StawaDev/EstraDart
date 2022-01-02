@@ -9,4 +9,5 @@ void main() async {
       "Total Text of Truth Challenge : ${await EstraData.totalGames("truth")}");
   print(
       "Total Text of AniGames Truth Challenge : ${await EstraData.totalAniGames("truth")}");
+  print("Version: ${await EstraData.version()}");
 }
