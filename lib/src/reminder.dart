@@ -17,7 +17,7 @@ class EstraReminderBase {
   /// Reminding Users about Updating EstraDart to Latest Version.
   UpdateReminder() async {
     var UtD_Ver = await HttpManager.Version();
-    var C_Ver = "0.1.5";
+    var C_Ver = "0.1.6";
     if (UtD_Ver != C_Ver) {
       print(
           "EstraReminder: It seems EstraDart have a new update version $UtD_Ver");
