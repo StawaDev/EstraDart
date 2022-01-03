@@ -1,3 +1,6 @@
+## v0.1.6
+- Updated Http Function
+
 ## v0.1.5
 - Added EstraData Class
 - Added New A Function with Counting Data Features From API
