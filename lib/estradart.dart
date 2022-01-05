@@ -5,6 +5,7 @@ import 'src/games.dart';
 import 'src/estrahelp.dart';
 import 'src/data.dart';
 import 'src/reminder.dart';
+import 'src/osu.dart';
 
 /// ### SFW Class
 /// AniGames Class Have Their Own Endpoint Functions, Once You Put The Correct Endpoint, It Will Return Normally,
@@ -104,3 +105,19 @@ var EstraData = new Data();
 /// ### Important Note
 /// As always, do NOT use this class function with print method, because it will return null as well.
 var EstraReminder = new EstraReminderBase();
+
+/// ### Osu Class
+/// This is an simple class that can be used to get data from osu api and we make it easy to use!
+///
+/// ### Examples
+/// ```
+/// void main() async {
+///  var client_id = ""; //Puts your client_id osu key
+///  var client_secret = ""; //Puts your client_secret osu key
+///  print(await Osu.osuprofile("Stawa", "avatar_url", client_id,
+///      client_secret)); // The "avatar_url" was the key from a value JSON Response
+///  print(await Osu.osuprofiledata(
+///      "Stawa", client_id, client_secret)); // Print all data from JSON Response
+///}
+///```
+var Osu = new TypeOsu();
