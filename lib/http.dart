@@ -4,11 +4,12 @@ import 'package:http/retry.dart';
 
 /// Variable HttpManager Have A Function That Return Output
 var HttpManager = new HttpManagers();
+var OsuClients = new OsuAPI();
 
 /// Class HttpManagers Have A Job That Will Return Output
 class HttpManagers {
-  var BASE_URL = "http://estra-api.herokuapp.com/api";
-  var VER_BASE_URL = "http://estra-api.herokuapp.com/api";
+  var BASE_URL = "https://estra-api.herokuapp.com/api";
+  var VER_BASE_URL = "https://estra-api.herokuapp.com/api";
   var Category;
   var EndPoint;
   var TypeFunction;
@@ -59,6 +60,39 @@ class HttpManagers {
     try {
       return jsonDecode(await base.read(Uri.parse("$VER_BASE_URL/version")))[
           "EstraDart"]["Version"];
+    } finally {
+      base.close();
+    }
+  }
+}
+
+class OsuAPI {
+  var BASE_URL = "https://estra-api.herokuapp.com/api";
+  var ids;
+  var client_id;
+  var client_secret;
+  var data_endpoint;
+  var data;
+
+  OsuLoader() async {
+    final base = RetryClient(http.Client());
+    try {
+      String DataText = await base.read(Uri.parse(
+          "$BASE_URL/osu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
+      return jsonDecode(DataText)["$data"];
+    } finally {
+      base.close();
+    }
+  }
+
+  OsuLoaderData() async {
+    final base = RetryClient(http.Client());
+    var encoder = new JsonEncoder.withIndent("     ");
+    try {
+      String DataText = await base.read(Uri.parse(
+          "$BASE_URL/osu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
+      var output = jsonDecode(DataText);
+      return encoder.convert(output);
     } finally {
       base.close();
     }
