@@ -73,13 +73,38 @@ class OsuAPI {
   var client_secret;
   var data_endpoint;
   var data;
+  var data2;
+  var data3;
+  var typeosu;
 
   OsuLoader() async {
     final base = RetryClient(http.Client());
     try {
       String DataText = await base.read(Uri.parse(
-          "$BASE_URL/osu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
+          "$BASE_URL/$typeosu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
       return jsonDecode(DataText)["$data"];
+    } finally {
+      base.close();
+    }
+  }
+
+  OsuLoader2() async {
+    final base = RetryClient(http.Client());
+    try {
+      String DataText = await base.read(Uri.parse(
+          "$BASE_URL/$typeosu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
+      return jsonDecode(DataText)["$data"]["$data2"];
+    } finally {
+      base.close();
+    }
+  }
+
+  OsuLoader3() async {
+    final base = RetryClient(http.Client());
+    try {
+      String DataText = await base.read(Uri.parse(
+          "$BASE_URL/$typeosu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
+      return jsonDecode(DataText)["$data"]["$data2"]["$data3"];
     } finally {
       base.close();
     }
@@ -90,7 +115,7 @@ class OsuAPI {
     var encoder = new JsonEncoder.withIndent("     ");
     try {
       String DataText = await base.read(Uri.parse(
-          "$BASE_URL/osu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
+          "$BASE_URL/$typeosu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
       var output = jsonDecode(DataText);
       return encoder.convert(output);
     } finally {
