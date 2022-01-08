@@ -15,6 +15,7 @@
 - Truth or Dare
 - Anime GIFs
 - Anime Waifu/Husbando Picture
+- OSU API Wrapper
 - User Friendly Code
 
 ## Simple Examples
