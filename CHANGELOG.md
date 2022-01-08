@@ -1,3 +1,7 @@
+## v0.1.7
+- Added New OsuClients Class
+- Added OSU API Wrapper Functions
+
 ## v0.1.6
 - Updated Http Function
 
