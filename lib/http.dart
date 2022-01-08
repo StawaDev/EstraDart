@@ -66,6 +66,7 @@ class HttpManagers {
   }
 }
 
+/// Class OsuAPI Is A Simple Class That Will Return a Response of OSU API
 class OsuAPI {
   var BASE_URL = "https://estra-api.herokuapp.com/api";
   var ids;
@@ -77,6 +78,7 @@ class OsuAPI {
   var data3;
   var typeosu;
 
+  /// Return Specific ONE Value from JSON Object
   OsuLoader() async {
     final base = RetryClient(http.Client());
     try {
@@ -88,6 +90,7 @@ class OsuAPI {
     }
   }
 
+  /// Return Specific TWO Value from JSON Object
   OsuLoader2() async {
     final base = RetryClient(http.Client());
     try {
@@ -99,6 +102,7 @@ class OsuAPI {
     }
   }
 
+  /// Return Specific THREE Value from JSON Object
   OsuLoader3() async {
     final base = RetryClient(http.Client());
     try {
@@ -110,6 +114,7 @@ class OsuAPI {
     }
   }
 
+  /// Return All JSON Response
   OsuLoaderData() async {
     final base = RetryClient(http.Client());
     var encoder = new JsonEncoder.withIndent("     ");
