@@ -1,3 +1,11 @@
+## v0.1.8
+- Added Produce/Generate GIfs/Text Parameters
+- Code Cleaning
+- Updated and Removed some Functions from OsuClients
+- Added Formatter JSON to some Functions that return JSON Objects
+- Updated AniGames Husbando, Waifu Functions
+- Updated Examples
+
 ## v0.1.7
 - Added New OsuClients Class
 - Added OSU API Wrapper Functions
