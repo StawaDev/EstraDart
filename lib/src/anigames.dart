@@ -51,4 +51,22 @@ class TypeAniGames {
     }
     return await HttpManager.AllData();
   }
+
+  /// Return Shipper Waifu as Text
+  shipper_waifu([String player = "None", bool formatters = false]) async {
+    HttpManager.EndPoint = "shipper/waifu/?player=$player";
+    if (formatters == true) {
+      return formatter(await HttpManager.AllData());
+    }
+    return await HttpManager.AllData();
+  }
+
+  /// Return Shipper Husbando as Text
+  shipper_husbando([String player = "None", bool formatters = false]) async {
+    HttpManager.EndPoint = "shipper/husbando?player=$player";
+    if (formatters == true) {
+      return formatter(await HttpManager.AllData());
+    }
+    return await HttpManager.AllData();
+  }
 }
