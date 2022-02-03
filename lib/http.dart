@@ -73,9 +73,6 @@ class OsuAPI {
   var client_id;
   var client_secret;
   var data_endpoint;
-  var data;
-  var data2;
-  var data3;
   var typeosu;
 
   /// Return Specific ONE Value from JSON Object
@@ -84,45 +81,7 @@ class OsuAPI {
     try {
       String DataText = await base.read(Uri.parse(
           "$BASE_URL/$typeosu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
-      return jsonDecode(DataText)["$data"];
-    } finally {
-      base.close();
-    }
-  }
-
-  /// Return Specific TWO Value from JSON Object
-  OsuLoader2() async {
-    final base = RetryClient(http.Client());
-    try {
-      String DataText = await base.read(Uri.parse(
-          "$BASE_URL/$typeosu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
-      return jsonDecode(DataText)["$data"]["$data2"];
-    } finally {
-      base.close();
-    }
-  }
-
-  /// Return Specific THREE Value from JSON Object
-  OsuLoader3() async {
-    final base = RetryClient(http.Client());
-    try {
-      String DataText = await base.read(Uri.parse(
-          "$BASE_URL/$typeosu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
-      return jsonDecode(DataText)["$data"]["$data2"]["$data3"];
-    } finally {
-      base.close();
-    }
-  }
-
-  /// Return All JSON Response
-  OsuLoaderData() async {
-    final base = RetryClient(http.Client());
-    var encoder = new JsonEncoder.withIndent("     ");
-    try {
-      String DataText = await base.read(Uri.parse(
-          "$BASE_URL/$typeosu/?$data_endpoint=$ids&client_id=$client_id&client_secret=$client_secret"));
-      var output = jsonDecode(DataText);
-      return encoder.convert(output);
+      return jsonDecode(DataText);
     } finally {
       base.close();
     }

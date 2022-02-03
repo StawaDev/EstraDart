@@ -1,3 +1,4 @@
+import 'package:estradart/base.dart';
 import 'package:estradart/http.dart';
 
 /// ### Games Class
@@ -16,14 +17,34 @@ class TypeGames {
   var Category = HttpManager.Category = "games";
 
   /// Return Truth as Text
-  truth() async {
+  /// ### Generate Examples
+  /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
+  /// ```
+  /// void main() async {
+  ///   print(await EstraGames.truth(5));
+  /// }
+  /// ```
+  truth([int generate = 0]) async {
     HttpManager.EndPoint = "truth";
+    if (generate > 1) {
+      return produce(Category, "truth", "text", generate);
+    }
     return await HttpManager.TypeText();
   }
 
   /// Return Dare as Text
-  dare() async {
+  /// ### Generate Examples
+  /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
+  /// ```
+  /// void main() async {
+  ///   print(await EstraGames.dare(5));
+  /// }
+  /// ```
+  dare([int generate = 0]) async {
     HttpManager.EndPoint = "dare";
+    if (generate > 1) {
+      return produce(Category, "dare", "text", generate);
+    }
     return await HttpManager.TypeText();
   }
 }

@@ -1,3 +1,4 @@
+import 'package:estradart/base.dart';
 import 'package:estradart/http.dart';
 
 /// ### AniGames Class
@@ -17,14 +18,20 @@ class TypeAniGames {
   var InputLink;
 
   /// Return Truth as Text
-  truth() async {
+  truth([int generate = 0]) async {
     HttpManager.EndPoint = "truth";
+    if (generate > 1) {
+      return produce(Category, "truth", "text", generate);
+    }
     return await HttpManager.TypeText();
   }
 
   /// Return Dare as Text
-  dare() async {
+  dare([int generate = 0]) async {
     HttpManager.EndPoint = "dare";
+    if (generate > 1) {
+      return produce(Category, "dare", "text", generate);
+    }
     return await HttpManager.TypeText();
   }
 
