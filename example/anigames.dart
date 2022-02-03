@@ -11,7 +11,8 @@ void main() async {
 
 // First Example
 void firstExample() async {
-  print("Truth Challenge: ${await EstraAniGames.truth()}");
+  print(
+      "Truth Challenge: ${await EstraAniGames.truth(2)}"); // Generate 2 Truth Text, Output: Type List<String>
   print("Dare challenge: ${await EstraAniGames.dare()}");
 }
 
