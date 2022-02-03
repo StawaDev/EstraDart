@@ -18,16 +18,14 @@ void firstExample() async {
 
 // Second Examples
 void secondExample() async {
-  var GetWaifu = EstraAniGames.InputLink = await EstraAniGames.waifu();
-  print("Waifu Picture: $GetWaifu");
-  print("Waifu Name: ${await EstraAniGames.waifu_name()}");
-  // Just an reminder, you can't use two waifu_name function in once or it will return the same name!
+  var Waifu = await EstraAniGames.waifu();
+  print("Waifu Picture: ${Waifu["link"]}");
+  print("Waifu Name: ${Waifu["character_name"]}");
 }
 
 // Third Examples
 void thirdExample() async {
-  var GetHusbando = EstraAniGames.InputLink = await EstraAniGames.husbando();
-  print("Husbando Picture: $GetHusbando");
-  print("Husbando Name: ${await EstraAniGames.husbando_name()}");
-  // Just an reminder, you can't use two waifu_name function in once or it will return the same name!
+  var Husbando = await EstraAniGames.husbando();
+  print("Husbando Picture: ${Husbando["link"]}");
+  print("Husbando Picture: ${Husbando["character_name"]}");
 }
