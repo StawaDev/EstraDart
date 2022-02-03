@@ -17,8 +17,8 @@ produce(category, endpoint, type, total) async {
         var link = await HttpManager.TypeLink();
         List.add(link);
       } else if (type == "text") {
-        var link = await HttpManager.TypeText();
-        List.add(link);
+        var text = await HttpManager.TypeText();
+        List.add(text);
       }
     }
   } catch (e) {
