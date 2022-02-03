@@ -2,9 +2,8 @@ library Estra;
 
 import 'package:estradart/estradart.dart';
 
-var client_id = "11944"; //Puts your client_id osu key
-var client_secret =
-    "2JazZLgf4KB1JnrZPlyUWYcdQFXn1b7nGM7dm2KE"; //Puts your client_secret osu key
+var client_id = ""; //Puts your client_id osu key
+var client_secret = ""; //Puts your client_secret osu key
 
 void OsuDataClient() async {
   Osu.client_id = client_id;
