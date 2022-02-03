@@ -4,6 +4,7 @@
 - Updated and Removed some Functions from OsuClients
 - Added Formatter JSON to some Functions that return JSON Objects
 - Updated AniGames Husbando, Waifu Functions
+- Added New Functions to AniGames, Shipper_Waifu & Shipper_Husbando
 - Updated Examples
 
 ## v0.1.7
