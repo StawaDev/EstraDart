@@ -64,6 +64,17 @@ class HttpManagers {
       base.close();
     }
   }
+
+  /// Return all JSON Data from API
+  AllData() async {
+    final base = RetryClient(http.Client());
+    try {
+      return jsonDecode(
+          await base.read(Uri.parse("$BASE_URL/$Category/$EndPoint")));
+    } finally {
+      base.close();
+    }
+  }
 }
 
 /// Class OsuAPI Is A Simple Class That Will Return a Response of OSU API

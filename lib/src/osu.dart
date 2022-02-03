@@ -1,4 +1,5 @@
 import 'package:estradart/http.dart';
+import 'package:estradart/base.dart';
 
 /// ### Import OsuAPI Class
 var OsuClients = new OsuAPI();
@@ -25,25 +26,35 @@ class TypeOsu {
   /// This Function Requires the following parameters username, data, client_id, client_secret
   /// In this new update, we are not using any others functions like osuprofile123 anymore.
   /// We are currently returning a JSON Object Response
-  Future osuprofile(username) async {
+  Future osuprofile(username, [bool formatters = false]) async {
     OsuClients.ids = "$username";
     OsuClients.client_id = "$client_id";
     OsuClients.client_secret = "$client_secret";
     OsuClients.typeosu = "osu";
     OsuClients.data_endpoint = "user";
-    return await OsuClients.OsuLoader();
+
+    var a = await OsuClients.OsuLoader();
+    if (formatters) {
+      return await formatter(a);
+    }
+    return a;
   }
 
   /// ### osubeatmap
   /// This Function Requires the following parameters id, data, client_id, client_secret
   /// In this new update, we are not using any others functions like osuprofile123 anymore.
   /// We are currently returning a JSON Object Response
-  Future osubeatmap(beatmap_id) async {
+  Future osubeatmap(beatmap_id, [bool formatters = false]) async {
     OsuClients.ids = "$beatmap_id";
     OsuClients.client_id = "$client_id";
     OsuClients.client_secret = "$client_secret";
     OsuClients.typeosu = "osubeatmap";
     OsuClients.data_endpoint = "id";
-    return await OsuClients.OsuLoader();
+
+    var a = await OsuClients.OsuLoader();
+    if (formatters) {
+      return await formatter(a);
+    }
+    return a;
   }
 }

@@ -1,4 +1,5 @@
 import 'package:estradart/http.dart';
+import 'dart:convert';
 
 produce(category, endpoint, type, total) async {
   if (total > 10) {
@@ -24,4 +25,9 @@ produce(category, endpoint, type, total) async {
     return e;
   }
   return List;
+}
+
+formatter(output) async {
+  var encoder = new JsonEncoder.withIndent("     ");
+  return encoder.convert(output);
 }

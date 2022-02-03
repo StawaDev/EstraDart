@@ -15,7 +15,6 @@ import 'package:estradart/http.dart';
 ///```
 class TypeAniGames {
   var Category = HttpManager.Category = "anigames";
-  var InputLink;
 
   /// Return Truth as Text
   truth([int generate = 0]) async {
@@ -36,60 +35,20 @@ class TypeAniGames {
   }
 
   /// Return Waifu as PNG
-  waifu() async {
+  waifu([bool formatters = false]) async {
     HttpManager.EndPoint = "waifu";
-    return await HttpManager.TypeLink();
+    if (formatters == true) {
+      return formatter(await HttpManager.AllData());
+    }
+    return await HttpManager.AllData();
   }
 
-  /// Return Truth as PNG
-  husbando() async {
+  /// Return Husbando as PNG
+  husbando([bool formatters = false]) async {
     HttpManager.EndPoint = "husbando";
-    return await HttpManager.TypeLink();
-  }
-
-  /// Return Waifu Characters Name as Text
-  Future waifu_name() async {
-    try {
-      var GetName = InputLink.replaceAll(
-          "https://estra-source.herokuapp.com/assets/images/Waifu/", "");
-      if (GetName.contains(".jpeg")) {
-        var RemoveType = GetName.replaceAll(".jpeg", "");
-        var WaifuName = RemoveType.replaceAll("-", " ");
-        return WaifuName;
-      } else if (GetName.contains(".png")) {
-        var RemoveType = GetName.replaceAll(".png", "");
-        var WaifuName = RemoveType.replaceAll("-", " ");
-        return WaifuName;
-      } else if (GetName.contains(".jpg")) {
-        var RemoveType = GetName.replaceAll(".jpg", "");
-        var WaifuName = RemoveType.replaceAll("-", " ");
-        return WaifuName;
-      }
-    } catch (e) {
-      return e;
+    if (formatters == true) {
+      return formatter(await HttpManager.AllData());
     }
-  }
-
-  /// Return Husbando Characters Name as Text
-  Future husbando_name() async {
-    try {
-      var GetName = InputLink.replaceAll(
-          "https://estra-source.herokuapp.com/assets/images/Husbando/", "");
-      if (GetName.contains(".jpeg")) {
-        var RemoveType = GetName.replaceAll(".jpeg", "");
-        var HusbandoName = RemoveType.replaceAll("-", " ");
-        return HusbandoName;
-      } else if (GetName.contains(".png")) {
-        var RemoveType = GetName.replaceAll(".png", "");
-        var HusbandoName = RemoveType.replaceAll("-", " ");
-        return HusbandoName;
-      } else if (GetName.contains(".jpg")) {
-        var RemoveType = GetName.replaceAll(".jpg", "");
-        var HusbandoName = RemoveType.replaceAll("-", " ");
-        return HusbandoName;
-      }
-    } catch (e) {
-      return e;
-    }
+    return await HttpManager.AllData();
   }
 }
