@@ -7,6 +7,7 @@ void main() async {
   firstExample();
   secondExample();
   thirdExample();
+  fourthExample();
 }
 
 // First Example
@@ -28,4 +29,12 @@ void thirdExample() async {
   var Husbando = await EstraAniGames.husbando();
   print("Husbando Picture: ${Husbando["link"]}");
   print("Husbando Picture: ${Husbando["character_name"]}");
+}
+
+// Fourth Examples
+void fourthExample() async {
+  var Shipper = await EstraAniGames.shipper_waifu("Stawa");
+  print("Player Name: ${Shipper["player"]}");
+  print("Waifu Name: ${Shipper["character"]}");
+  print("Percentage: ${Shipper["percentage"]}");
 }
