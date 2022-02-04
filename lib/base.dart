@@ -10,21 +10,21 @@ produce(category, endpoint, type, total) async {
 
   HttpManager.EndPoint = endpoint;
   HttpManager.Category = category;
-  var List = [];
+  var list = [];
   try {
     for (int i = 0; i < total; i++) {
       if (type == "link") {
         var link = await HttpManager.TypeLink();
-        List.add(link);
+        list.add(link);
       } else if (type == "text") {
         var text = await HttpManager.TypeText();
-        List.add(text);
+        list.add(text);
       }
     }
   } catch (e) {
     return e;
   }
-  return List;
+  return list;
 }
 
 formatter(output) async {
