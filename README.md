@@ -3,7 +3,7 @@
 </h1>
 
 <h2 align="center">
-    A Basic Wrapper Anime Image API Using EstraAPI with Dart/Flutter Language
+    A Basic Wrapper Anime Image API with Many Features & User-Friendly Code
 </h2>
 <p align="center">
 <a href="https://stawa.gitbook.io/estraapi-documentation/"><img src ="https://img.shields.io/badge/Estra--API-Documentation-brightgreen?style=for-the-badge"></a>
