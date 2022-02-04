@@ -4,7 +4,7 @@ import 'package:http/retry.dart';
 
 /// Variable HttpManager Have A Function That Return Output
 var HttpManager = new HttpManagers();
-var OsuClients = new OsuAPI();
+var OsuWrapper = new OsuAPI();
 
 /// Class HttpManagers Have A Job That Will Return Output
 class HttpManagers {
@@ -71,6 +71,15 @@ class HttpManagers {
     try {
       return jsonDecode(
           await base.read(Uri.parse("$BASE_URL/$Category/$EndPoint")));
+    } finally {
+      base.close();
+    }
+  }
+
+  get(url) async {
+    final base = RetryClient(http.Client());
+    try {
+      return await http.get(Uri.parse(url));
     } finally {
       base.close();
     }

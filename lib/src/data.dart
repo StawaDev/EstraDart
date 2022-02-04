@@ -2,7 +2,7 @@ import 'package:estradart/http.dart';
 
 /// ### Data Class
 /// This is an data class that returning total image or text in specific endpoints
-class Data {
+class DataEP {
   /// Return Total Image from JSON Requests
   totalSfw(EndPoint) async {
     HttpManager.Category = "sfw";

@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:estradart/http.dart';
 import 'dart:convert';
 
@@ -30,4 +31,12 @@ produce(category, endpoint, type, total) async {
 formatter(output) async {
   var encoder = new JsonEncoder.withIndent("     ");
   return encoder.convert(output);
+}
+
+downloadImage() async {
+  await HttpManager.get(
+          "https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI")
+      .then((response) {
+    new File("./test123.png").writeAsBytes(response.bodyBytes);
+  });
 }

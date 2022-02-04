@@ -12,7 +12,14 @@ var SFW = [
   "slap"
 ];
 var NSFW = ["yaoi", "yuri", "kill"];
-var AniGamesList = ["truth", "dare", "waifu", "husbando"];
+var AniGamesList = [
+  "truth",
+  "dare",
+  "waifu",
+  "husbando",
+  "shipper_waifu",
+  "shipper_husbando"
+];
 var GamesList = ["truth", "dare"];
 var AllList = {
   "Sfw": "${SFW.join(", ")}",
@@ -31,7 +38,7 @@ var AllList = {
 ///   print(EstraHelp.Sfw());
 /// }
 /// ```
-class Help {
+class Helper {
   /// Return Sfw Endpoints as List
   Sfw() {
     return "Sfw List Endpoints: ${SFW.join(", ")}";

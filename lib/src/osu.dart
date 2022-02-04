@@ -1,9 +1,6 @@
 import 'package:estradart/http.dart';
 import 'package:estradart/base.dart';
 
-/// ### Import OsuAPI Class
-var OsuClients = new OsuAPI();
-
 /// ### Osu Class
 /// This is an simple class that can be used to get data from osu api and we make it easy to use!
 ///
@@ -27,13 +24,13 @@ class TypeOsu {
   /// In this new update, we are not using any others functions like osuprofile123 anymore.
   /// We are currently returning a JSON Object Response
   Future osuprofile(username, [bool formatters = false]) async {
-    OsuClients.ids = "$username";
-    OsuClients.client_id = "$client_id";
-    OsuClients.client_secret = "$client_secret";
-    OsuClients.typeosu = "osu";
-    OsuClients.data_endpoint = "user";
+    OsuWrapper.ids = "$username";
+    OsuWrapper.client_id = "$client_id";
+    OsuWrapper.client_secret = "$client_secret";
+    OsuWrapper.typeosu = "osu";
+    OsuWrapper.data_endpoint = "user";
 
-    var a = await OsuClients.OsuLoader();
+    var a = await OsuWrapper.OsuLoader();
     if (formatters) {
       return await formatter(a);
     }
@@ -45,13 +42,13 @@ class TypeOsu {
   /// In this new update, we are not using any others functions like osuprofile123 anymore.
   /// We are currently returning a JSON Object Response
   Future osubeatmap(beatmap_id, [bool formatters = false]) async {
-    OsuClients.ids = "$beatmap_id";
-    OsuClients.client_id = "$client_id";
-    OsuClients.client_secret = "$client_secret";
-    OsuClients.typeosu = "osubeatmap";
-    OsuClients.data_endpoint = "id";
+    OsuWrapper.ids = "$beatmap_id";
+    OsuWrapper.client_id = "$client_id";
+    OsuWrapper.client_secret = "$client_secret";
+    OsuWrapper.typeosu = "osubeatmap";
+    OsuWrapper.data_endpoint = "id";
 
-    var a = await OsuClients.OsuLoader();
+    var a = await OsuWrapper.OsuLoader();
     if (formatters) {
       return await formatter(a);
     }
