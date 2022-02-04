@@ -9,7 +9,6 @@ var OsuWrapper = new OsuAPI();
 /// Class HttpManagers Have A Job That Will Return Output
 class HttpManagers {
   var BASE_URL = "https://estra-api.herokuapp.com/api";
-  var VER_BASE_URL = "https://estra-api.herokuapp.com/api";
   var Category;
   var EndPoint;
   var TypeFunction;
@@ -58,8 +57,8 @@ class HttpManagers {
   Version() async {
     final base = RetryClient(http.Client());
     try {
-      return jsonDecode(await base.read(Uri.parse("$VER_BASE_URL/version")))[
-          "EstraDart"]["Version"];
+      return jsonDecode(await base
+          .read(Uri.parse("${BASE_URL.replaceAll("/api", "")}/version")));
     } finally {
       base.close();
     }

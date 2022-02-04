@@ -33,10 +33,9 @@ formatter(output) async {
   return encoder.convert(output);
 }
 
-downloadImage() async {
-  await HttpManager.get(
-          "https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI")
-      .then((response) {
-    new File("./test123.png").writeAsBytes(response.bodyBytes);
+downloadImage(url, filename) async {
+  await HttpManager.get(url).then((response) {
+    new File("${Directory.current.path}\\$filename.png")
+        .writeAsBytes(response.bodyBytes);
   });
 }
