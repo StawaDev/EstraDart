@@ -2,12 +2,14 @@ library Estra;
 
 import 'package:estradart/estradart.dart';
 
+var Client = new EstraClient();
+
 var client_id = ""; //Puts your client_id osu key
 var client_secret = ""; //Puts your client_secret osu key
 
 void OsuDataClient() async {
-  Osu.client_id = client_id;
-  Osu.client_secret = client_secret;
+  Client.OsuClients.client_id = client_id;
+  Client.OsuClients.client_secret = client_secret;
 }
 
 void main() async {
@@ -17,15 +19,15 @@ void main() async {
 }
 
 void firstExample() async {
-  var profile = await Osu.osuprofile("Stawa");
+  var profile = await Client.OsuClients.osuprofile("Stawa");
   print(profile["avatar_url"]);
-  var format_profile = await Osu.osuprofile("Stawa", true);
+  var format_profile = await Client.OsuClients.osuprofile("Stawa", true);
   print("Formatted Profile: ${format_profile}");
 }
 
 void secondExample() async {
-  var beatmap = await Osu.osubeatmap("2405223");
+  var beatmap = await Client.OsuClients.osubeatmap("2405223");
   print("Beatmap Artist: ${beatmap['beatmapset']['artist']}");
-  var format_beatmap = await Osu.osubeatmap("2405223", true);
+  var format_beatmap = await Client.OsuClients.osubeatmap("2405223", true);
   print("Formatted Beatmap: ${format_beatmap}");
 }

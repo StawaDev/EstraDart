@@ -1,10 +1,14 @@
+library Estra;
+
 import 'package:estradart/estradart.dart';
+
+var Client = new EstraClient();
 
 // Available endpoints "All, Sfw, Nsfw, AniGames, Nsfw"
 void main() {
-  print(EstraHelp.Sfw());
-  print(EstraHelp.Nsfw());
-  print(EstraHelp.AniGames());
-  print(EstraHelp.Games());
-  print(EstraHelp.All());
+  print(Client.Help.Sfw());
+  print(Client.Help.Nsfw());
+  print(Client.Help.AniGames());
+  print(Client.Help.Games());
+  print(Client.Help.All());
 }
