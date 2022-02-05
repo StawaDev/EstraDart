@@ -5,10 +5,10 @@ import 'package:http/retry.dart';
 /// Variable HttpManager Have A Function That Return Output
 var HttpManager = new HttpManagers();
 var OsuWrapper = new OsuAPI();
+var BASE_URL = "https://estra-api.herokuapp.com/api";
 
 /// Class HttpManagers Have A Job That Will Return Output
 class HttpManagers {
-  var BASE_URL = "https://estra-api.herokuapp.com/api";
   var Category;
   var EndPoint;
   var TypeFunction;
