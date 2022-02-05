@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:estradart/http.dart';
 
+var civ = "0.1.9";
+
 /// ### EstraReminderBase
 /// This Class Will Be Remidning Users Something About EstraDart, Like Reminding Update of EstraDart
 /// ### Examples
@@ -19,7 +21,6 @@ class EstraVersionClient {
   /// Reminding Users about Updating EstraDart to Latest Version.
   reminderOnly() async {
     var data = await HttpManager.Version();
-    var civ = "0.1.8";
     var csv = data["EstraDart"]["Version"];
 
     if (civ != csv) {
@@ -40,7 +41,6 @@ class EstraVersionClient {
   /// Configuring AutoUpdate of EstraDart.
   config([output = true, change_log = true]) async {
     var data = await HttpManager.Version();
-    var civ = "0.1.8";
     var csv = data["EstraDart"]["Version"];
     var cl = "Change Log: ${data["EstraDart"]["Change Logs"]}";
 

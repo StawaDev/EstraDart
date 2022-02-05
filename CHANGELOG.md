@@ -1,3 +1,10 @@
+## v0.1.9
+- Updated Documentation Functions
+- Added new Functions to Games, Shipper
+- Renamed Class EstraReminderBase to EstraVersionClient
+- Updated Reminder from EstraVersionClient, Added new Functions to EstraVersionClient
+- Code Cleaning
+
 ## v0.1.8
 - Added Produce/Generate GIfs/Text Parameters
 - Code Cleaning
