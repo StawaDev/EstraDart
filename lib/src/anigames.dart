@@ -8,9 +8,13 @@ import 'package:estradart/http.dart';
 /// ### Examples
 /// This is an simple example of an AniGame EndPoints Function.
 /// ```dart
+/// library Estra;
+/// import 'package:estradart/estradart.dart';
+/// var Client = new EstraClient();
+///
 /// void main() async {
-///  print(await EstraAniGames.truth());
-///  print(await EstraAniGames.waifu());
+///   print(await Client.AniGames.truth());
+///   print(await Client.AniGames.waifu());
 ///}
 ///```
 class TypeAniGames {

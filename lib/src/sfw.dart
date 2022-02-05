@@ -8,9 +8,13 @@ import 'package:estradart/base.dart';
 /// ### Examples
 /// This is an simple example of an SFW endpoints functions.
 /// ```dart
+/// library Estra;
+/// import 'package:estradart/estradart.dart';
+/// var Client = new EstraClient();
+///
 /// void main() async {
-///  print(await EstraSFW.poke());
-///  print(await EstraSFW.run());
+///   print(await Client.Sfw.poke());
+///   print(await Client.Sfw.run());
 ///}
 ///```
 class TypeSFW {
@@ -21,8 +25,12 @@ class TypeSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraSFW.hug(5));
+  ///   print(await Client.Sfw.hug(5));
   /// }
   /// ```
   hug([int generate = 0]) async {
@@ -37,8 +45,12 @@ class TypeSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraSFW.run(5));
+  ///   print(await Client.Sfw.run(5));
   /// }
   /// ```
   run([int generate = 0]) async {
@@ -53,8 +65,12 @@ class TypeSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraSFW.smile(5));
+  ///   print(await Client.Sfw.smile(5));
   /// }
   /// ```
   smile([int generate = 0]) async {
@@ -69,8 +85,12 @@ class TypeSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraSFW.headpat(5));
+  ///   print(await Client.Sfw.headpat(5));
   /// }
   /// ```
   headpat([int generate = 0]) async {
@@ -85,8 +105,12 @@ class TypeSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraSFW.neko(5));
+  ///   print(await Client.Sfw.neko(5));
   /// }
   /// ```
   neko([int generate = 0]) async {
@@ -101,8 +125,12 @@ class TypeSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraSFW.bite(5));
+  ///   print(await Client.Sfw.bite(5));
   /// }
   /// ```
   bite([int generate = 0]) async {
@@ -117,8 +145,12 @@ class TypeSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraSFW.highfive(5));
+  ///   print(await Client.Sfw.highfive(5));
   /// }
   /// ```
   highfive([int generate = 0]) async {
@@ -133,8 +165,12 @@ class TypeSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraSFW.poke(5));
+  ///   print(await Client.Sfw.poke(5));
   /// }
   /// ```
   poke([int generate = 0]) async {
@@ -149,8 +185,12 @@ class TypeSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraSFW.slap(5));
+  ///   print(await Client.Sfw.slap(5));
   /// }
   /// ```
   slap([int generate = 0]) async {

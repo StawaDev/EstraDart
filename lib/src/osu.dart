@@ -6,13 +6,22 @@ import 'package:estradart/base.dart';
 ///
 /// ### Examples
 /// ```
+/// library Estra;
+/// import 'package:estradart/estradart.dart';
+/// var Client = new EstraClient();
+///
+/// var client_id = ""; //Puts your client_id osu key
+/// var client_secret = ""; //Puts your client_secret osu key
+///
+/// void OsuDataClient() async {
+///   Client.OsuClients.client_id = client_id;
+///   Client.OsuClients.client_secret = client_secret;
+///}
 /// void main() async {
-///  var client_id = ""; //Puts your client_id osu key
-///  var client_secret = ""; //Puts your client_secret osu key
-///  print(await Osu.osuprofile("Stawa", "avatar_url", client_id,
-///      client_secret)); // The "avatar_url" was the key from a value JSON Response
-///  print(await Osu.osuprofiledata(
-///      "Stawa", client_id, client_secret)); // Print all data from JSON Response
+///   var profile = await Client.OsuClients.osuprofile("Stawa");
+///   print(profile["avatar_url"]);
+///   var format_profile = await Client.OsuClients.osuprofile("Stawa", true);
+///   print("Formatted Profile: ${format_profile}");
 ///}
 ///```
 class TypeOsu {

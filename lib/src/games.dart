@@ -92,6 +92,10 @@ class TypeGames {
   /// Return Shipper as Image
   /// ### Shipper Examples
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
   ///   print(await Client.Games.shipper(await data, false, false, true));
   /// }

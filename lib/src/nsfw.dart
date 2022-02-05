@@ -8,9 +8,13 @@ import 'package:estradart/base.dart';
 /// ### Examples
 /// This is an simple example of an NSFW endpoints functions.
 /// ```dart
+/// library Estra;
+/// import 'package:estradart/estradart.dart';
+/// var Client = new EstraClient();
+///
 /// void main() async {
-///  print(await EstraNSFW.kill());
-///  print(await EstraNSFW.yuri());
+///   print(await Client.Nsfw.kill());
+///   print(await Client.Nsfw.yuri());
 ///}
 ///```
 class TypeNSFW {
@@ -20,8 +24,12 @@ class TypeNSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraNSFW.kill(5));
+  ///   print(await Client.Nsfw.kill(5));
   /// }
   /// ```
   kill([int generate = 0]) async {
@@ -36,8 +44,12 @@ class TypeNSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraNSFW.yuri(5));
+  ///   print(await Client.Nsfw.yuri(5));
   /// }
   /// ```
   yuri([int generate = 0]) async {
@@ -52,8 +64,12 @@ class TypeNSFW {
   /// ### Generate Examples
   /// In here you can actually generate more than one GIF! Max 10. And Of course, it will return a list type.
   /// ```
+  /// library Estra;
+  /// import 'package:estradart/estradart.dart';
+  /// var Client = new EstraClient();
+  ///
   /// void main() async {
-  ///   print(await EstraNSFW.yaoi(5));
+  ///   print(await Client.Nsfw.yaoi(5));
   /// }
   /// ```
   yaoi([int generate = 0]) async {

@@ -34,8 +34,10 @@ var AllList = {
 /// ```dart
 /// library Estra;
 /// import 'package:estradart/estradart.dart';
+/// var Client = new EstraClient();
+///
 /// void main() {
-///   print(EstraHelp.Sfw());
+///   print(Client.Help.All());
 /// }
 /// ```
 class Helper {

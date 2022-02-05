@@ -28,6 +28,7 @@ class EstraVersionClient {
     }
   }
 
+  /// Updating EstraDart to Latest Version.
   update() async {
     Process.run("dart pub upgrade estradart", [],
             runInShell: true, workingDirectory: Directory.current.path)
@@ -36,6 +37,7 @@ class EstraVersionClient {
     });
   }
 
+  /// Configuring AutoUpdate of EstraDart.
   config([output = true, change_log = true]) async {
     var data = await HttpManager.Version();
     var civ = "0.1.8";

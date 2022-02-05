@@ -10,7 +10,7 @@ void main() async {
 
 void firstExample() async {
   print(await Client.Nsfw.kill(
-      2)); // Generate 2 Hug Gifs, Output: Type List<String>
+      2)); // Generate 2 Nsfw Kill Gifs, Output: Type List<String>
   print(await Client.Nsfw.yuri());
   // More EndPoint Use EstraHelp Function!
 }
